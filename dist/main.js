@@ -21,19 +21,50 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, `.menu-image{
+___CSS_LOADER_EXPORT___.push([module.id, `body{
+    margin: 0;
+    padding: 0;
+}
+
+.menu-image{
     width: 150px;
     height: 150px;
 }
 
+header{
+    background-color: rgb(19, 213, 206);
+    height: 40px;
+}
+
+nav{
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    align-items: center;
+    justify-content: center;
+}
+
+.homepic>img{
+    width: 300px;
+}
+
+
 #content{
-    width: 800;
+    background-color: aquamarine;
+    width: 50vw;
+    height: calc(100vh - 40px);
+    text-align: center;
+    margin-left: 25%;
 }
 
 button{
-    background-color: red;
+    background-color: rgb(0, 0, 0);
     color: white;
-}`, "",{"version":3,"sources":["webpack://./src/style.css"],"names":[],"mappings":"AAAA;IACI,YAAY;IACZ,aAAa;AACjB;;AAEA;IACI,UAAU;AACd;;AAEA;IACI,qBAAqB;IACrB,YAAY;AAChB","sourcesContent":[".menu-image{\n    width: 150px;\n    height: 150px;\n}\n\n#content{\n    width: 800;\n}\n\nbutton{\n    background-color: red;\n    color: white;\n}"],"sourceRoot":""}]);
+    height: 40px;
+    font-size: 18px;
+    font-weight: bold;
+    border: 0;
+}`, "",{"version":3,"sources":["webpack://./src/style.css"],"names":[],"mappings":"AAAA;IACI,SAAS;IACT,UAAU;AACd;;AAEA;IACI,YAAY;IACZ,aAAa;AACjB;;AAEA;IACI,mCAAmC;IACnC,YAAY;AAChB;;AAEA;IACI,aAAa;IACb,mBAAmB;IACnB,SAAS;IACT,mBAAmB;IACnB,uBAAuB;AAC3B;;AAEA;IACI,YAAY;AAChB;;;AAGA;IACI,4BAA4B;IAC5B,WAAW;IACX,0BAA0B;IAC1B,kBAAkB;IAClB,gBAAgB;AACpB;;AAEA;IACI,8BAA8B;IAC9B,YAAY;IACZ,YAAY;IACZ,eAAe;IACf,iBAAiB;IACjB,SAAS;AACb","sourcesContent":["body{\n    margin: 0;\n    padding: 0;\n}\n\n.menu-image{\n    width: 150px;\n    height: 150px;\n}\n\nheader{\n    background-color: rgb(19, 213, 206);\n    height: 40px;\n}\n\nnav{\n    display: flex;\n    flex-direction: row;\n    gap: 15px;\n    align-items: center;\n    justify-content: center;\n}\n\n.homepic>img{\n    width: 300px;\n}\n\n\n#content{\n    background-color: aquamarine;\n    width: 50vw;\n    height: calc(100vh - 40px);\n    text-align: center;\n    margin-left: 25%;\n}\n\nbutton{\n    background-color: rgb(0, 0, 0);\n    color: white;\n    height: 40px;\n    font-size: 18px;\n    font-weight: bold;\n    border: 0;\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -489,7 +520,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 function homepage() {
-    console.log("home button clicked");
     const homepageDiv = document.getElementById("content");
 
     // Clear previous content
@@ -503,8 +533,9 @@ function homepage() {
 
     // Add image
     const image = document.createElement("img");
-    image.src = "https://preview.redd.it/i-got-bored-so-i-decided-to-draw-a-random-image-on-the-v0-4ig97vv85vjb1.png?width=640&crop=smart&auto=webp&s=22ed6cc79cba3013b84967f32726d087e539b699";
+    image.src = "https://www.bestdesignprojects.com/wp-content/uploads/2018/12/Ina-Damyanova-Is-the-Interior-Designer-Of-The-Club-Horizont-capa-715x400.jpg";
     picDiv.appendChild(image);
+    picDiv.classList.add("homepic");
 
     headline.innerHTML = 'Exquisite Food made affordable';
     headDiv.appendChild(headline);
@@ -554,18 +585,30 @@ function menu_item(variable, imageLink, name, description){
 }
 
 function menu() {
-    console.log("home button clicked");
-    
     // Clear previous content
     homepageDiv.innerHTML = '';
 
     //menu items = 1
     const item1 = document.createElement("div");
-    const imageLink = "https://www.allrecipes.com/thmb/UsNtGp9OgIsKw6cPqGQ-CxLmnTE=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/AR-72657-best-hamburger-ever-ddmfs-4x3-hero-878e801ab30445988d007461782b3c25.jpg";
-    const desc = "Two buns with a delicious meat patty";
-    menu_item(item1,imageLink,"Hamburger",desc);
-
+    const imageLink1 = "https://www.allrecipes.com/thmb/UsNtGp9OgIsKw6cPqGQ-CxLmnTE=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/AR-72657-best-hamburger-ever-ddmfs-4x3-hero-878e801ab30445988d007461782b3c25.jpg";
+    const desc1 = "Two buns with a delicious meat patty";
+    menu_item(item1,imageLink1,"Hamburger",desc1);
     homepageDiv.appendChild(item1);
+
+    //menu items = 2
+    const item2 = document.createElement("div");
+    const imageLink2 = "https://www.wholesomeyum.com/wp-content/uploads/2023/12/wholesomeyum-Grilled-Lobster-Tail.jpg";
+    const desc2 = "Cracked salty lobster with lemon addi";
+    menu_item(item2,imageLink2,"Lobster",desc2);
+    homepageDiv.appendChild(item2);
+
+    //menu items = 2
+    const item3 = document.createElement("div");
+    const imageLink3 = "https://www.kitchensanctuary.com/wp-content/uploads/2020/10/Lasagne-square-FS-79.jpg";
+    const desc3 = "Homemade Lasagne";
+    menu_item(item3,imageLink3,"Lasagne",desc3);
+    homepageDiv.appendChild(item3);
+
 
 }
 

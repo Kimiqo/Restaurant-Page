@@ -1,0 +1,44 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.menu-image{
+    width: 150px;
+    height: 150px;
+}
+
+header{
+    background-color: rgb(19, 213, 206);
+    height: 40px;
+}
+
+nav{
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    align-items: center;
+    justify-content: center;
+}
+
+.homepic>img{
+    width: 300px;
+}
+
+
+#content{
+    background-color: aquamarine;
+    width: 50vw;
+    height: calc(100vh - 40px);
+    text-align: center;
+    margin-left: 25%;
+}
+
+button{
+    background-color: rgb(0, 0, 0);
+    color: white;
+    height: 40px;
+    font-size: 18px;
+    font-weight: bold;
+    border: 0;
+}

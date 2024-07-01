@@ -1,4 +1,6 @@
 import homepage from "./homepage";
+import menu from "./menu";
+import './style.css'
 
 const homepageContent = document.getElementById('content');
 const homebtn = document.getElementById('homeBtn');
@@ -13,7 +15,7 @@ function render() {
 
     menubtn.addEventListener('click', () => {
         console.log("Menu button clicked");
-        // Call the menu function here
+        menu();
     });
 
     aboutbtn.addEventListener('click', () => {

@@ -1,5 +1,4 @@
 function homepage() {
-    console.log("home button clicked");
     const homepageDiv = document.getElementById("content");
 
     // Clear previous content
@@ -13,8 +12,9 @@ function homepage() {
 
     // Add image
     const image = document.createElement("img");
-    image.src = "https://preview.redd.it/i-got-bored-so-i-decided-to-draw-a-random-image-on-the-v0-4ig97vv85vjb1.png?width=640&crop=smart&auto=webp&s=22ed6cc79cba3013b84967f32726d087e539b699";
+    image.src = "https://www.bestdesignprojects.com/wp-content/uploads/2018/12/Ina-Damyanova-Is-the-Interior-Designer-Of-The-Club-Horizont-capa-715x400.jpg";
     picDiv.appendChild(image);
+    picDiv.classList.add("homepic");
 
     headline.innerHTML = 'Exquisite Food made affordable';
     headDiv.appendChild(headline);

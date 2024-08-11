@@ -3,6 +3,7 @@ function homepage() {
 
     // Clear previous content
     homepageDiv.innerHTML = '';
+    homepageDiv.style.display = "block ";
 
     const picDiv = document.createElement("div");
     const headDiv = document.createElement("div");

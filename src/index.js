@@ -1,8 +1,8 @@
 import homepage from "./homepage";
 import menu from "./menu";
+import about from "./about";
 import './style.css'
 
-const homepageContent = document.getElementById('content');
 const homebtn = document.getElementById('homeBtn');
 const menubtn = document.getElementById('menuBtn');
 const aboutbtn = document.getElementById('aboutBtn');
@@ -32,7 +32,7 @@ function render() {
         menubtn.style.color = "white";
         homebtn.style.color = "white";
         console.log("About button clicked");
-        // Call the about function here
+        about();
     });
 }
 

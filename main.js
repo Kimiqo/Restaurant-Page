@@ -679,6 +679,48 @@ module.exports = styleTagTransform;
 
 /***/ }),
 
+/***/ "./src/about.js":
+/*!**********************!*\
+  !*** ./src/about.js ***!
+  \**********************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ about)
+/* harmony export */ });
+const homepageDiv = document.getElementById("content");
+
+function about() {
+    homepageDiv.innerHTML = "";
+    homepageDiv.style.display = "block";
+
+
+    homepageDiv.innerHTML = `
+    <h1>About Us</h1>
+<h3><b>Welcome to Slices of Heaven!</b></h3>
+<p>At Slices of Heaven, we believe that pizza is more than just a meal—it's a slice of happiness. Nestled in the heart of [Your City], our pizzeria has been the go-to spot for pizza lovers since [Year of Establishment]. Whether you're here for a quick slice or a full pizza experience, we treat every guest like family.</p>
+
+<h3><b>Our Story</b></h3>
+<p>Our story began with a simple dream: to bring the authentic flavors of Italy to our community. With a passion for quality and a dedication to tradition, our founders opened Slices of Heaven to share their love of pizza. Every pizza we create is a tribute to the artistry of Italian cooking, made with the freshest ingredients and a lot of love.</p>
+
+<h3><b>Our Ingredients</b></h3>
+<p>Quality is the cornerstone of everything we do at Slices of Heaven. We handpick the finest ingredients, from sun-ripened tomatoes to creamy mozzarella and fresh basil. Our dough is prepared fresh daily, hand-stretched to perfection, and baked in our traditional stone oven to achieve that perfect crispy crust. We believe that great ingredients make great pizza, and we never compromise on quality.</p>
+
+<h3><b>Our Commitment</b></h3>
+<p>At Slices of Heaven, we're committed to providing a warm and welcoming atmosphere where everyone can enjoy a slice of their favorite pizza. From classic Margherita to our signature creations, we have something to satisfy every craving. We also offer a variety of vegetarian and gluten-free options, ensuring that everyone can find their perfect slice.</p>
+
+<h3><b>Join Us</b></h3>
+<p>Whether you're dining in, taking out, or ordering delivery, Slices of Heaven is here to serve you. Come in and experience the taste of true pizza perfection. We can't wait to welcome you to our table!</p>
+`;
+
+
+}
+
+
+
+/***/ }),
+
 /***/ "./src/homepage.js":
 /*!*************************!*\
   !*** ./src/homepage.js ***!
@@ -825,35 +867,35 @@ function menu() {
 
     // Menu item 4: Vegetarian Delight
     const item4 = document.createElement("div");
-    const imageLink4 = "https://www.acouplecooks.com/wp-content/uploads/2021/06/Best-Vegetarian-Pizza-003.jpg";
+    const imageLink4 = "https://www.orchidsandsweettea.com/wp-content/uploads/2019/05/Veggie-Pizza-2-of-5-e1691215701129.jpg";
     const desc4 = "A colorful mix of bell peppers, olives, mushrooms, onions, and spinach on a bed of tomato sauce.";
     menu_item(item4, imageLink4, "Vegetarian Delight", desc4, 11.99);
     homepageDiv.appendChild(item4);
 
     // Menu item 5: Meat Lovers Pizza
     const item5 = document.createElement("div");
-    const imageLink5 = "https://www.simplyrecipes.com/thmb/XuM1G9qj1IrTkRBa3F8U7dIhW-k=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Simply-Recipes-Meat-Lovers-Pizza-LEAD-08-b9e7edb92d2c4dd0b2c67b0a209decc1.jpg";
+    const imageLink5 = "https://www.queensleeappetit.com/wp-content/uploads/2019/02/Meat-Lovers-Pizza-5-1-480x480.jpg";
     const desc5 = "A hearty combination of pepperoni, sausage, bacon, and ham, piled high with mozzarella.";
     menu_item(item5, imageLink5, "Meat Lovers Pizza", desc5, 15.99);
     homepageDiv.appendChild(item5);
 
     // Menu item 6: Hawaiian Pizza
     const item6 = document.createElement("div");
-    const imageLink6 = "https://www.cookingclassy.com/wp-content/uploads/2019/02/hawaiian-pizza-20.jpg";
+    const imageLink6 = "https://static01.nyt.com/images/2023/03/29/multimedia/23HAMREX2-pineapple-ham-pizza-qwct/HAMREX2-pineapple-ham-pizza-qwct-superJumbo.jpg";
     const desc6 = "Sweet and savory with juicy pineapple, ham, and a sprinkle of mozzarella on a tomato base.";
     menu_item(item6, imageLink6, "Hawaiian Pizza", desc6, 12.49);
     homepageDiv.appendChild(item6);
 
     // Menu item 7: Spicy Buffalo Chicken
     const item7 = document.createElement("div");
-    const imageLink7 = "https://www.spendwithpennies.com/wp-content/uploads/2022/03/Spicy-Buffalo-Chicken-Pizza-SpendWithPennies-12.jpg";
+    const imageLink7 = "https://hips.hearstapps.com/hmg-prod/images/190226-buffalo-chicken-pizza-370-1552084943.jpg";
     const desc7 = "Buffalo sauce, grilled chicken, red onions, and a drizzle of ranch dressing, topped with mozzarella.";
     menu_item(item7, imageLink7, "Spicy Buffalo Chicken", desc7, 13.49);
     homepageDiv.appendChild(item7);
 
     // Menu item 8: Four Cheese Pizza
     const item8 = document.createElement("div");
-    const imageLink8 = "https://www.sugarandsoul.co/wp-content/uploads/2017/09/white-four-cheese-pizza-recipe-4.jpg";
+    const imageLink8 = "https://kitchenatics.com/wp-content/uploads/2020/09/Cheese-pizza-1.jpg";
     const desc8 = "A rich blend of mozzarella, cheddar, parmesan, and gorgonzola, perfect for cheese lovers.";
     menu_item(item8, imageLink8, "Four Cheese Pizza", desc8, 14.49);
     homepageDiv.appendChild(item8);
@@ -944,12 +986,13 @@ var __webpack_exports__ = {};
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _homepage__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./homepage */ "./src/homepage.js");
 /* harmony import */ var _menu__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./menu */ "./src/menu.js");
-/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./style.css */ "./src/style.css");
+/* harmony import */ var _about__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./about */ "./src/about.js");
+/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./style.css */ "./src/style.css");
 
 
 
 
-const homepageContent = document.getElementById('content');
+
 const homebtn = document.getElementById('homeBtn');
 const menubtn = document.getElementById('menuBtn');
 const aboutbtn = document.getElementById('aboutBtn');
@@ -979,7 +1022,7 @@ function render() {
         menubtn.style.color = "white";
         homebtn.style.color = "white";
         console.log("About button clicked");
-        // Call the about function here
+        (0,_about__WEBPACK_IMPORTED_MODULE_2__["default"])();
     });
 }
 

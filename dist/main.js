@@ -21,10 +21,16 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, `body{
+___CSS_LOADER_EXPORT___.push([module.id, `:root{
+    --background: linear-gradient(to left, #f7ba2b 0%, #ea5358 100%);
+}
+
+body{
     margin: 0;
     padding: 0;
-    background-color: black;
+    background-image: url("https://4kwallpapers.com/images/wallpapers/dark-background-abstract-background-network-3d-background-4480x2520-8324.png");
+    background-attachment: fixed;
+
 }
 
 .menu-image{
@@ -33,7 +39,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `body{
 }
 
 header{
-    background-color: black;
+    background-color: rgb(35, 35, 35);
     height: 50px;
     display: flex;
     align-items: center;
@@ -49,7 +55,14 @@ nav{
 }
 
 .homepic>img{
-    width: 300px;
+    width: 700px;
+}
+
+.details{
+    text-align: left;
+    color: #000;
+    background: var(--background);
+    padding: 5px;
 }
 
 /* button{
@@ -64,10 +77,10 @@ nav{
 } */
 
 /* Content-Page */ 
-#content {
-    --background: linear-gradient(to left, #f7ba2b 0%, #ea5358 100%);
+#content-frame {
+
     width: 50vw;
-    height: calc(100vh - 50px);
+    /* height: calc(100vh - 50px); */
     /* text-align: center; */
     margin-left: 25%;
     padding: 5px;
@@ -79,7 +92,7 @@ nav{
     z-index: 1;
    }
    
-   #content::after {
+   #content-frame::after {
     position: absolute;
     content: "";
     top: 30px;
@@ -95,8 +108,8 @@ nav{
     transition: opacity .5s;
    }
    
-   #content-info {
-    --color: #181818;
+   #content-bg {
+    --color: #000000;
     background: var(--color);
     color: var(--color);
     display: flex;
@@ -108,18 +121,19 @@ nav{
     border-radius: .7rem;
    }
    
-   #content .title {
-    font-weight: bold;
+   #content-frame #content {
     letter-spacing: .1em;
+    text-align: center;
     color: white;
+    padding: 10px;
    }
    
    /*Hover*/
-   #content:hover::after {
+   #content-frame:hover::after {
     opacity: 0;
    }
    
-   #content:hover #content-info {
+   #content-frame:hover #content-bg {
     color: #f7ba2b;
     transition: color 1s;
    }
@@ -162,13 +176,13 @@ button {
   }
   
   button:active {
-    -webkit-box-shadow: 1px 1px 13px #20232e, -1px -1px 33px #545b78;
-    box-shadow: 1px 1px 13px #20232e, -1px -1px 33px #545b78;
-    color: #d6d6d6;
+    -webkit-box-shadow: 1px 1px 13px #f7ba2b, -1px -1px 33px #545b78;
+    box-shadow: 1px 1px 13px #20232e, -1px -1px 33px #f7ba2b;
+    color: #f7ba2b;
     -webkit-transition: 100ms;
     transition: 100ms;
   }
-  `, "",{"version":3,"sources":["webpack://./src/style.css"],"names":[],"mappings":"AAAA;IACI,SAAS;IACT,UAAU;IACV,uBAAuB;AAC3B;;AAEA;IACI,YAAY;IACZ,aAAa;AACjB;;AAEA;IACI,uBAAuB;IACvB,YAAY;IACZ,aAAa;IACb,mBAAmB;IACnB,uBAAuB;AAC3B;;AAEA;IACI,aAAa;IACb,mBAAmB;IACnB,SAAS;IACT,mBAAmB;IACnB,uBAAuB;AAC3B;;AAEA;IACI,YAAY;AAChB;;AAEA;;;;;;;;;GASG;;AAEH,iBAAiB;AACjB;IACI,gEAAgE;IAChE,WAAW;IACX,0BAA0B;IAC1B,wBAAwB;IACxB,gBAAgB;IAChB,YAAY;IACZ,mBAAmB;IACnB,iBAAiB;IACjB,mBAAmB;IACnB,6BAA6B;IAC7B,kBAAkB;IAClB,UAAU;GACX;;GAEA;IACC,kBAAkB;IAClB,WAAW;IACX,SAAS;IACT,OAAO;IACP,QAAQ;IACR,WAAW;IACX,YAAY;IACZ,WAAW;IACX,qBAAqB;IACrB,kBAAkB;IAClB,mBAAmB;IACnB,6BAA6B;IAC7B,uBAAuB;GACxB;;GAEA;IACC,gBAAgB;IAChB,wBAAwB;IACxB,mBAAmB;IACnB,aAAa;IACb,uBAAuB;IACvB,mBAAmB;IACnB,WAAW;IACX,YAAY;IACZ,iBAAiB;IACjB,oBAAoB;GACrB;;GAEA;IACC,iBAAiB;IACjB,oBAAoB;IACpB,YAAY;GACb;;GAEA,QAAQ;GACR;IACC,UAAU;GACX;;GAEA;IACC,cAAc;IACd,oBAAoB;GACrB;;;GAGA,WAAW;AACd;IACI,YAAY;IACZ,WAAW;IACX,YAAY;IACZ,gBAAgB;IAChB,wBAAwB;IACxB,qBAAqB;IACrB,uBAAuB;IACvB,eAAe;IACf,yBAAyB;IACzB,sBAAsB;IACtB,mBAAmB;IACnB,6CAA6C;IAC7C,yBAAyB;IACzB,eAAe;IACf,iBAAiB;IACjB,yBAAyB;IACzB,yBAAyB;IACzB,iBAAiB;IACjB,kBAAkB;IAClB,qDAAqD;IACrD;8DAC0D;IAC1D;8DAC0D;EAC5D;;EAEA;IACE,gEAAgE;IAChE,wDAAwD;IACxD,cAAc;IACd,yBAAyB;IACzB,iBAAiB;EACnB;;EAEA;IACE,gEAAgE;IAChE,wDAAwD;IACxD,cAAc;IACd,yBAAyB;IACzB,iBAAiB;EACnB","sourcesContent":["body{\n    margin: 0;\n    padding: 0;\n    background-color: black;\n}\n\n.menu-image{\n    width: 150px;\n    height: 150px;\n}\n\nheader{\n    background-color: black;\n    height: 50px;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n}\n\nnav{\n    display: flex;\n    flex-direction: row;\n    gap: 15px;\n    align-items: center;\n    justify-content: center;\n}\n\n.homepic>img{\n    width: 300px;\n}\n\n/* button{\n    background-color: white;\n    color: black;\n    width: 100px;\n    height: 40px;\n    font-size: 18px;\n    font-weight: bold;\n    border: 0;\n    border-radius: 10px;\n} */\n\n/* Content-Page */ \n#content {\n    --background: linear-gradient(to left, #f7ba2b 0%, #ea5358 100%);\n    width: 50vw;\n    height: calc(100vh - 50px);\n    /* text-align: center; */\n    margin-left: 25%;\n    padding: 5px;\n    border-radius: 1rem;\n    overflow: visible;\n    background: #f7ba2b;\n    background: var(--background);\n    position: relative;\n    z-index: 1;\n   }\n   \n   #content::after {\n    position: absolute;\n    content: \"\";\n    top: 30px;\n    left: 0;\n    right: 0;\n    z-index: -1;\n    height: 100%;\n    width: 100%;\n    transform: scale(0.8);\n    filter: blur(25px);\n    background: #f7ba2b;\n    background: var(--background);\n    transition: opacity .5s;\n   }\n   \n   #content-info {\n    --color: #181818;\n    background: var(--color);\n    color: var(--color);\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    width: 100%;\n    height: 100%;\n    overflow: visible;\n    border-radius: .7rem;\n   }\n   \n   #content .title {\n    font-weight: bold;\n    letter-spacing: .1em;\n    color: white;\n   }\n   \n   /*Hover*/\n   #content:hover::after {\n    opacity: 0;\n   }\n   \n   #content:hover #content-info {\n    color: #f7ba2b;\n    transition: color 1s;\n   }\n   \n\n   /* Button */ \nbutton {\n    height: 50px;\n    margin: 5px;\n    width: 120px;\n    background: #333;\n    -webkit-box-pack: center;\n    -ms-flex-pack: center;\n    justify-content: center;\n    cursor: pointer;\n    -webkit-box-align: center;\n    -ms-flex-align: center;\n    align-items: center;\n    font-family: Consolas, Courier New, monospace;\n    border: solid #404c5d 1px;\n    font-size: 18px;\n    font-weight: bold;\n    color: rgb(255, 255, 255);\n    -webkit-transition: 500ms;\n    transition: 500ms;\n    border-radius: 5px;\n    background: linear-gradient(145deg, #2e2d2d, #212121);\n    -webkit-box-shadow: -1px -5px 15px #41465b, 5px 5px 15px #41465b,\n      inset 5px 5px 10px #212121, inset -5px -5px 10px #212121;\n    box-shadow: -1px -5px 15px #41465b, 5px 5px 15px #41465b,\n      inset 5px 5px 10px #212121, inset -5px -5px 10px #212121;\n  }\n  \n  button:hover {\n    -webkit-box-shadow: 1px 1px 13px #20232e, -1px -1px 13px #545b78;\n    box-shadow: 1px 1px 13px #20232e, -1px -1px 13px #545b78;\n    color: #d6d6d6;\n    -webkit-transition: 500ms;\n    transition: 500ms;\n  }\n  \n  button:active {\n    -webkit-box-shadow: 1px 1px 13px #20232e, -1px -1px 33px #545b78;\n    box-shadow: 1px 1px 13px #20232e, -1px -1px 33px #545b78;\n    color: #d6d6d6;\n    -webkit-transition: 100ms;\n    transition: 100ms;\n  }\n  "],"sourceRoot":""}]);
+  `, "",{"version":3,"sources":["webpack://./src/style.css"],"names":[],"mappings":"AAAA;IACI,gEAAgE;AACpE;;AAEA;IACI,SAAS;IACT,UAAU;IACV,gJAAgJ;IAChJ,4BAA4B;;AAEhC;;AAEA;IACI,YAAY;IACZ,aAAa;AACjB;;AAEA;IACI,iCAAiC;IACjC,YAAY;IACZ,aAAa;IACb,mBAAmB;IACnB,uBAAuB;AAC3B;;AAEA;IACI,aAAa;IACb,mBAAmB;IACnB,SAAS;IACT,mBAAmB;IACnB,uBAAuB;AAC3B;;AAEA;IACI,YAAY;AAChB;;AAEA;IACI,gBAAgB;IAChB,WAAW;IACX,6BAA6B;IAC7B,YAAY;AAChB;;AAEA;;;;;;;;;GASG;;AAEH,iBAAiB;AACjB;;IAEI,WAAW;IACX,gCAAgC;IAChC,wBAAwB;IACxB,gBAAgB;IAChB,YAAY;IACZ,mBAAmB;IACnB,iBAAiB;IACjB,mBAAmB;IACnB,6BAA6B;IAC7B,kBAAkB;IAClB,UAAU;GACX;;GAEA;IACC,kBAAkB;IAClB,WAAW;IACX,SAAS;IACT,OAAO;IACP,QAAQ;IACR,WAAW;IACX,YAAY;IACZ,WAAW;IACX,qBAAqB;IACrB,kBAAkB;IAClB,mBAAmB;IACnB,6BAA6B;IAC7B,uBAAuB;GACxB;;GAEA;IACC,gBAAgB;IAChB,wBAAwB;IACxB,mBAAmB;IACnB,aAAa;IACb,uBAAuB;IACvB,mBAAmB;IACnB,WAAW;IACX,YAAY;IACZ,iBAAiB;IACjB,oBAAoB;GACrB;;GAEA;IACC,oBAAoB;IACpB,kBAAkB;IAClB,YAAY;IACZ,aAAa;GACd;;GAEA,QAAQ;GACR;IACC,UAAU;GACX;;GAEA;IACC,cAAc;IACd,oBAAoB;GACrB;;;GAGA,WAAW;AACd;IACI,YAAY;IACZ,WAAW;IACX,YAAY;IACZ,gBAAgB;IAChB,wBAAwB;IACxB,qBAAqB;IACrB,uBAAuB;IACvB,eAAe;IACf,yBAAyB;IACzB,sBAAsB;IACtB,mBAAmB;IACnB,6CAA6C;IAC7C,yBAAyB;IACzB,eAAe;IACf,iBAAiB;IACjB,yBAAyB;IACzB,yBAAyB;IACzB,iBAAiB;IACjB,kBAAkB;IAClB,qDAAqD;IACrD;8DAC0D;IAC1D;8DAC0D;EAC5D;;EAEA;IACE,gEAAgE;IAChE,wDAAwD;IACxD,cAAc;IACd,yBAAyB;IACzB,iBAAiB;EACnB;;EAEA;IACE,gEAAgE;IAChE,wDAAwD;IACxD,cAAc;IACd,yBAAyB;IACzB,iBAAiB;EACnB","sourcesContent":[":root{\n    --background: linear-gradient(to left, #f7ba2b 0%, #ea5358 100%);\n}\n\nbody{\n    margin: 0;\n    padding: 0;\n    background-image: url(\"https://4kwallpapers.com/images/wallpapers/dark-background-abstract-background-network-3d-background-4480x2520-8324.png\");\n    background-attachment: fixed;\n\n}\n\n.menu-image{\n    width: 150px;\n    height: 150px;\n}\n\nheader{\n    background-color: rgb(35, 35, 35);\n    height: 50px;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n}\n\nnav{\n    display: flex;\n    flex-direction: row;\n    gap: 15px;\n    align-items: center;\n    justify-content: center;\n}\n\n.homepic>img{\n    width: 700px;\n}\n\n.details{\n    text-align: left;\n    color: #000;\n    background: var(--background);\n    padding: 5px;\n}\n\n/* button{\n    background-color: white;\n    color: black;\n    width: 100px;\n    height: 40px;\n    font-size: 18px;\n    font-weight: bold;\n    border: 0;\n    border-radius: 10px;\n} */\n\n/* Content-Page */ \n#content-frame {\n\n    width: 50vw;\n    /* height: calc(100vh - 50px); */\n    /* text-align: center; */\n    margin-left: 25%;\n    padding: 5px;\n    border-radius: 1rem;\n    overflow: visible;\n    background: #f7ba2b;\n    background: var(--background);\n    position: relative;\n    z-index: 1;\n   }\n   \n   #content-frame::after {\n    position: absolute;\n    content: \"\";\n    top: 30px;\n    left: 0;\n    right: 0;\n    z-index: -1;\n    height: 100%;\n    width: 100%;\n    transform: scale(0.8);\n    filter: blur(25px);\n    background: #f7ba2b;\n    background: var(--background);\n    transition: opacity .5s;\n   }\n   \n   #content-bg {\n    --color: #000000;\n    background: var(--color);\n    color: var(--color);\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    width: 100%;\n    height: 100%;\n    overflow: visible;\n    border-radius: .7rem;\n   }\n   \n   #content-frame #content {\n    letter-spacing: .1em;\n    text-align: center;\n    color: white;\n    padding: 10px;\n   }\n   \n   /*Hover*/\n   #content-frame:hover::after {\n    opacity: 0;\n   }\n   \n   #content-frame:hover #content-bg {\n    color: #f7ba2b;\n    transition: color 1s;\n   }\n   \n\n   /* Button */ \nbutton {\n    height: 50px;\n    margin: 5px;\n    width: 120px;\n    background: #333;\n    -webkit-box-pack: center;\n    -ms-flex-pack: center;\n    justify-content: center;\n    cursor: pointer;\n    -webkit-box-align: center;\n    -ms-flex-align: center;\n    align-items: center;\n    font-family: Consolas, Courier New, monospace;\n    border: solid #404c5d 1px;\n    font-size: 18px;\n    font-weight: bold;\n    color: rgb(255, 255, 255);\n    -webkit-transition: 500ms;\n    transition: 500ms;\n    border-radius: 5px;\n    background: linear-gradient(145deg, #2e2d2d, #212121);\n    -webkit-box-shadow: -1px -5px 15px #41465b, 5px 5px 15px #41465b,\n      inset 5px 5px 10px #212121, inset -5px -5px 10px #212121;\n    box-shadow: -1px -5px 15px #41465b, 5px 5px 15px #41465b,\n      inset 5px 5px 10px #212121, inset -5px -5px 10px #212121;\n  }\n  \n  button:hover {\n    -webkit-box-shadow: 1px 1px 13px #20232e, -1px -1px 13px #545b78;\n    box-shadow: 1px 1px 13px #20232e, -1px -1px 13px #545b78;\n    color: #d6d6d6;\n    -webkit-transition: 500ms;\n    transition: 500ms;\n  }\n  \n  button:active {\n    -webkit-box-shadow: 1px 1px 13px #f7ba2b, -1px -1px 33px #545b78;\n    box-shadow: 1px 1px 13px #20232e, -1px -1px 33px #f7ba2b;\n    color: #f7ba2b;\n    -webkit-transition: 100ms;\n    transition: 100ms;\n  }\n  "],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -631,9 +645,12 @@ function homepage() {
 
     const picDiv = document.createElement("div");
     const headDiv = document.createElement("div");
-    const headline = document.createElement("h2");
+    const restName = document.createElement("h1");
+    const headline = document.createElement("h3");
     const textDiv = document.createElement("div");
-    const details = document.createElement("p");
+    const restDetails = document.createElement("p");
+    const hours = document.createElement("p");
+    const location = document.createElement("p");
 
 
     // Add image
@@ -642,11 +659,29 @@ function homepage() {
     picDiv.appendChild(image);
     picDiv.classList.add("homepic");
 
-    headline.innerHTML = 'Pizza this.. Pizza that.. Anything Pizza..';
+    restName.innerHTML = 'Slices Of Heaven';
+    headline.innerHTML = 'Where Every Bite is a Slice of Perfection!';
+    headDiv.appendChild(restName);
     headDiv.appendChild(headline);
 
-    details.innerHTML = 'Lorem ipsum afhjashf dfjhjs jh ajfahjs asjhdf sd fjah wo fw o owew ro wfo pbiwoa aii wf i aifi';
-    textDiv.appendChild(details);
+    //restaurant details
+    restDetails.innerHTML = "<center><b>Description</b></center> At Slice of Heaven, we believe pizza is more than just food—it's a passion. Our handcrafted pizzas are made with love, using the freshest ingredients and a perfect blend of flavors that will transport your taste buds straight to Italy. Whether you’re in the mood for a classic Margherita or a gourmet creation, each slice promises a heavenly experience. Join us for a taste that will leave you craving more!";
+    textDiv.appendChild(restDetails);
+
+    //hours
+    hours.innerHTML = `<b>Opening Hours</b> <br>
+    Monday to Thursday: 11:00 AM - 10:00 PM <br>
+    Friday & Saturday: 11:00 AM - 11:00 PM <br>
+    Sunday: 12:00 PM - 9:00 PM`;
+    textDiv.appendChild(hours);
+
+    //location
+    location.innerHTML = `<b>Contact Details</b> <br>
+    Phone: (555) 123-4567 <br>
+    Email: info@sliceofheavenpizza.com <br>
+    Address: 123 Pizza Lane, Foodie Town, FL 12345`;
+    textDiv.appendChild(location);
+    textDiv.classList.add("details");
 
     homepageDiv.appendChild(picDiv);
     homepageDiv.appendChild(headDiv);
@@ -813,6 +848,8 @@ const homepageContent = document.getElementById('content');
 const homebtn = document.getElementById('homeBtn');
 const menubtn = document.getElementById('menuBtn');
 const aboutbtn = document.getElementById('aboutBtn');
+
+(0,_homepage__WEBPACK_IMPORTED_MODULE_0__["default"])();
 
 function render() {
     homebtn.addEventListener('click', () => {

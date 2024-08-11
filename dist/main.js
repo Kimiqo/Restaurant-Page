@@ -52,16 +52,7 @@ nav{
     width: 300px;
 }
 
-
-#content{
-    background-color: aquamarine;
-    width: 50vw;
-    height: calc(100vh - 50px);
-    text-align: center;
-    margin-left: 25%;
-}
-
-button{
+/* button{
     background-color: white;
     color: black;
     width: 100px;
@@ -70,7 +61,114 @@ button{
     font-weight: bold;
     border: 0;
     border-radius: 10px;
-}`, "",{"version":3,"sources":["webpack://./src/style.css"],"names":[],"mappings":"AAAA;IACI,SAAS;IACT,UAAU;IACV,uBAAuB;AAC3B;;AAEA;IACI,YAAY;IACZ,aAAa;AACjB;;AAEA;IACI,uBAAuB;IACvB,YAAY;IACZ,aAAa;IACb,mBAAmB;IACnB,uBAAuB;AAC3B;;AAEA;IACI,aAAa;IACb,mBAAmB;IACnB,SAAS;IACT,mBAAmB;IACnB,uBAAuB;AAC3B;;AAEA;IACI,YAAY;AAChB;;;AAGA;IACI,4BAA4B;IAC5B,WAAW;IACX,0BAA0B;IAC1B,kBAAkB;IAClB,gBAAgB;AACpB;;AAEA;IACI,uBAAuB;IACvB,YAAY;IACZ,YAAY;IACZ,YAAY;IACZ,eAAe;IACf,iBAAiB;IACjB,SAAS;IACT,mBAAmB;AACvB","sourcesContent":["body{\n    margin: 0;\n    padding: 0;\n    background-color: black;\n}\n\n.menu-image{\n    width: 150px;\n    height: 150px;\n}\n\nheader{\n    background-color: black;\n    height: 50px;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n}\n\nnav{\n    display: flex;\n    flex-direction: row;\n    gap: 15px;\n    align-items: center;\n    justify-content: center;\n}\n\n.homepic>img{\n    width: 300px;\n}\n\n\n#content{\n    background-color: aquamarine;\n    width: 50vw;\n    height: calc(100vh - 50px);\n    text-align: center;\n    margin-left: 25%;\n}\n\nbutton{\n    background-color: white;\n    color: black;\n    width: 100px;\n    height: 40px;\n    font-size: 18px;\n    font-weight: bold;\n    border: 0;\n    border-radius: 10px;\n}"],"sourceRoot":""}]);
+} */
+
+/* Content-Page */ 
+#content {
+    --background: linear-gradient(to left, #f7ba2b 0%, #ea5358 100%);
+    width: 50vw;
+    height: calc(100vh - 50px);
+    /* text-align: center; */
+    margin-left: 25%;
+    padding: 5px;
+    border-radius: 1rem;
+    overflow: visible;
+    background: #f7ba2b;
+    background: var(--background);
+    position: relative;
+    z-index: 1;
+   }
+   
+   #content::after {
+    position: absolute;
+    content: "";
+    top: 30px;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    transform: scale(0.8);
+    filter: blur(25px);
+    background: #f7ba2b;
+    background: var(--background);
+    transition: opacity .5s;
+   }
+   
+   #content-info {
+    --color: #181818;
+    background: var(--color);
+    color: var(--color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+    border-radius: .7rem;
+   }
+   
+   #content .title {
+    font-weight: bold;
+    letter-spacing: .1em;
+    color: white;
+   }
+   
+   /*Hover*/
+   #content:hover::after {
+    opacity: 0;
+   }
+   
+   #content:hover #content-info {
+    color: #f7ba2b;
+    transition: color 1s;
+   }
+   
+
+   /* Button */ 
+button {
+    height: 50px;
+    margin: 5px;
+    width: 120px;
+    background: #333;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    cursor: pointer;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    font-family: Consolas, Courier New, monospace;
+    border: solid #404c5d 1px;
+    font-size: 18px;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    -webkit-transition: 500ms;
+    transition: 500ms;
+    border-radius: 5px;
+    background: linear-gradient(145deg, #2e2d2d, #212121);
+    -webkit-box-shadow: -1px -5px 15px #41465b, 5px 5px 15px #41465b,
+      inset 5px 5px 10px #212121, inset -5px -5px 10px #212121;
+    box-shadow: -1px -5px 15px #41465b, 5px 5px 15px #41465b,
+      inset 5px 5px 10px #212121, inset -5px -5px 10px #212121;
+  }
+  
+  button:hover {
+    -webkit-box-shadow: 1px 1px 13px #20232e, -1px -1px 13px #545b78;
+    box-shadow: 1px 1px 13px #20232e, -1px -1px 13px #545b78;
+    color: #d6d6d6;
+    -webkit-transition: 500ms;
+    transition: 500ms;
+  }
+  
+  button:active {
+    -webkit-box-shadow: 1px 1px 13px #20232e, -1px -1px 33px #545b78;
+    box-shadow: 1px 1px 13px #20232e, -1px -1px 33px #545b78;
+    color: #d6d6d6;
+    -webkit-transition: 100ms;
+    transition: 100ms;
+  }
+  `, "",{"version":3,"sources":["webpack://./src/style.css"],"names":[],"mappings":"AAAA;IACI,SAAS;IACT,UAAU;IACV,uBAAuB;AAC3B;;AAEA;IACI,YAAY;IACZ,aAAa;AACjB;;AAEA;IACI,uBAAuB;IACvB,YAAY;IACZ,aAAa;IACb,mBAAmB;IACnB,uBAAuB;AAC3B;;AAEA;IACI,aAAa;IACb,mBAAmB;IACnB,SAAS;IACT,mBAAmB;IACnB,uBAAuB;AAC3B;;AAEA;IACI,YAAY;AAChB;;AAEA;;;;;;;;;GASG;;AAEH,iBAAiB;AACjB;IACI,gEAAgE;IAChE,WAAW;IACX,0BAA0B;IAC1B,wBAAwB;IACxB,gBAAgB;IAChB,YAAY;IACZ,mBAAmB;IACnB,iBAAiB;IACjB,mBAAmB;IACnB,6BAA6B;IAC7B,kBAAkB;IAClB,UAAU;GACX;;GAEA;IACC,kBAAkB;IAClB,WAAW;IACX,SAAS;IACT,OAAO;IACP,QAAQ;IACR,WAAW;IACX,YAAY;IACZ,WAAW;IACX,qBAAqB;IACrB,kBAAkB;IAClB,mBAAmB;IACnB,6BAA6B;IAC7B,uBAAuB;GACxB;;GAEA;IACC,gBAAgB;IAChB,wBAAwB;IACxB,mBAAmB;IACnB,aAAa;IACb,uBAAuB;IACvB,mBAAmB;IACnB,WAAW;IACX,YAAY;IACZ,iBAAiB;IACjB,oBAAoB;GACrB;;GAEA;IACC,iBAAiB;IACjB,oBAAoB;IACpB,YAAY;GACb;;GAEA,QAAQ;GACR;IACC,UAAU;GACX;;GAEA;IACC,cAAc;IACd,oBAAoB;GACrB;;;GAGA,WAAW;AACd;IACI,YAAY;IACZ,WAAW;IACX,YAAY;IACZ,gBAAgB;IAChB,wBAAwB;IACxB,qBAAqB;IACrB,uBAAuB;IACvB,eAAe;IACf,yBAAyB;IACzB,sBAAsB;IACtB,mBAAmB;IACnB,6CAA6C;IAC7C,yBAAyB;IACzB,eAAe;IACf,iBAAiB;IACjB,yBAAyB;IACzB,yBAAyB;IACzB,iBAAiB;IACjB,kBAAkB;IAClB,qDAAqD;IACrD;8DAC0D;IAC1D;8DAC0D;EAC5D;;EAEA;IACE,gEAAgE;IAChE,wDAAwD;IACxD,cAAc;IACd,yBAAyB;IACzB,iBAAiB;EACnB;;EAEA;IACE,gEAAgE;IAChE,wDAAwD;IACxD,cAAc;IACd,yBAAyB;IACzB,iBAAiB;EACnB","sourcesContent":["body{\n    margin: 0;\n    padding: 0;\n    background-color: black;\n}\n\n.menu-image{\n    width: 150px;\n    height: 150px;\n}\n\nheader{\n    background-color: black;\n    height: 50px;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n}\n\nnav{\n    display: flex;\n    flex-direction: row;\n    gap: 15px;\n    align-items: center;\n    justify-content: center;\n}\n\n.homepic>img{\n    width: 300px;\n}\n\n/* button{\n    background-color: white;\n    color: black;\n    width: 100px;\n    height: 40px;\n    font-size: 18px;\n    font-weight: bold;\n    border: 0;\n    border-radius: 10px;\n} */\n\n/* Content-Page */ \n#content {\n    --background: linear-gradient(to left, #f7ba2b 0%, #ea5358 100%);\n    width: 50vw;\n    height: calc(100vh - 50px);\n    /* text-align: center; */\n    margin-left: 25%;\n    padding: 5px;\n    border-radius: 1rem;\n    overflow: visible;\n    background: #f7ba2b;\n    background: var(--background);\n    position: relative;\n    z-index: 1;\n   }\n   \n   #content::after {\n    position: absolute;\n    content: \"\";\n    top: 30px;\n    left: 0;\n    right: 0;\n    z-index: -1;\n    height: 100%;\n    width: 100%;\n    transform: scale(0.8);\n    filter: blur(25px);\n    background: #f7ba2b;\n    background: var(--background);\n    transition: opacity .5s;\n   }\n   \n   #content-info {\n    --color: #181818;\n    background: var(--color);\n    color: var(--color);\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    width: 100%;\n    height: 100%;\n    overflow: visible;\n    border-radius: .7rem;\n   }\n   \n   #content .title {\n    font-weight: bold;\n    letter-spacing: .1em;\n    color: white;\n   }\n   \n   /*Hover*/\n   #content:hover::after {\n    opacity: 0;\n   }\n   \n   #content:hover #content-info {\n    color: #f7ba2b;\n    transition: color 1s;\n   }\n   \n\n   /* Button */ \nbutton {\n    height: 50px;\n    margin: 5px;\n    width: 120px;\n    background: #333;\n    -webkit-box-pack: center;\n    -ms-flex-pack: center;\n    justify-content: center;\n    cursor: pointer;\n    -webkit-box-align: center;\n    -ms-flex-align: center;\n    align-items: center;\n    font-family: Consolas, Courier New, monospace;\n    border: solid #404c5d 1px;\n    font-size: 18px;\n    font-weight: bold;\n    color: rgb(255, 255, 255);\n    -webkit-transition: 500ms;\n    transition: 500ms;\n    border-radius: 5px;\n    background: linear-gradient(145deg, #2e2d2d, #212121);\n    -webkit-box-shadow: -1px -5px 15px #41465b, 5px 5px 15px #41465b,\n      inset 5px 5px 10px #212121, inset -5px -5px 10px #212121;\n    box-shadow: -1px -5px 15px #41465b, 5px 5px 15px #41465b,\n      inset 5px 5px 10px #212121, inset -5px -5px 10px #212121;\n  }\n  \n  button:hover {\n    -webkit-box-shadow: 1px 1px 13px #20232e, -1px -1px 13px #545b78;\n    box-shadow: 1px 1px 13px #20232e, -1px -1px 13px #545b78;\n    color: #d6d6d6;\n    -webkit-transition: 500ms;\n    transition: 500ms;\n  }\n  \n  button:active {\n    -webkit-box-shadow: 1px 1px 13px #20232e, -1px -1px 33px #545b78;\n    box-shadow: 1px 1px 13px #20232e, -1px -1px 33px #545b78;\n    color: #d6d6d6;\n    -webkit-transition: 100ms;\n    transition: 100ms;\n  }\n  "],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -533,17 +631,18 @@ function homepage() {
 
     const picDiv = document.createElement("div");
     const headDiv = document.createElement("div");
+    const headline = document.createElement("h2");
     const textDiv = document.createElement("div");
     const details = document.createElement("p");
-    const headline = document.createElement("h2");
+
 
     // Add image
     const image = document.createElement("img");
-    image.src = "https://www.bestdesignprojects.com/wp-content/uploads/2018/12/Ina-Damyanova-Is-the-Interior-Designer-Of-The-Club-Horizont-capa-715x400.jpg";
+    image.src = "https://upload.wikimedia.org/wikipedia/commons/9/91/Pizza-3007395.jpg";
     picDiv.appendChild(image);
     picDiv.classList.add("homepic");
 
-    headline.innerHTML = 'Exquisite Food made affordable';
+    headline.innerHTML = 'Pizza this.. Pizza that.. Anything Pizza..';
     headDiv.appendChild(headline);
 
     details.innerHTML = 'Lorem ipsum afhjashf dfjhjs jh ajfahjs asjhdf sd fjah wo fw o owew ro wfo pbiwoa aii wf i aifi';

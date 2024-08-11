@@ -7,6 +7,8 @@ const homebtn = document.getElementById('homeBtn');
 const menubtn = document.getElementById('menuBtn');
 const aboutbtn = document.getElementById('aboutBtn');
 
+homepage();
+
 function render() {
     homebtn.addEventListener('click', () => {
         console.log("Home button clicked");
